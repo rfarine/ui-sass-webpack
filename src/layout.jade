@@ -1,0 +1,41 @@
+doctype html
+
+<!--[if lt IE 8]>
+html(lang="en" xmlns:fb="http://ogp.me/ns/fb#" class="ie")
+<![endif]-->
+
+<!--[if IE 8]>
+html(lang="en" xmlns:fb="http://ogp.me/ns/fb#" class="ie ie8")
+<![endif]-->
+
+<!--[if IE 9]>
+html(lang="en" xmlns:fb="http://ogp.me/ns/fb#" class="ie ie9")
+<![endif]-->
+
+<!--[if (gt IE 9)|!(IE)]><!-->
+html(lang="en" xmlns:fb="http://ogp.me/ns/fb#")
+  <!--<![endif]-->
+
+  head
+    include ./_includes/meta.jade
+
+    if prerender == true
+      meta(name="fragment" content="!")
+
+    block title
+      title= title
+
+    script(src='/vendor/modernizr-custom.js')
+    script(src='/js/base.bundle.js')
+
+    link(rel='stylesheet' href='/css/styleguide.css')
+
+    block head
+
+  body
+
+    block content
+      #content
+        != appContent
+
+    block footer
