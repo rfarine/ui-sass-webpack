@@ -2,7 +2,9 @@ var webpack = require('webpack');
 var path = require('path');
 
 var config = {
-  entry: [path.resolve(__dirname, 'src/components/index.jsx')],
+  entry: [
+    path.resolve(__dirname, 'src/components/index.jsx'),
+  ],
 
   output: {
     path: path.resolve(__dirname, 'public'),
@@ -16,17 +18,14 @@ var config = {
         loader: 'transform?envify!babel',
         include: [
           path.resolve(__dirname, "src/components"),
+          path.resolve(__dirname, "src/js"),
         ],
       }
-    ],
-    preLoaders : [
-      {
-        test: /\.js$/,
-        loaders: ['eslint'],
-        include: [new RegExp(path.join(__dirname, 'src'))]
-      }
     ]
-  }
+  },
+  resolve: {
+    extensions: ['', '.js', '.jsx']
+  },
 };
 
 module.exports = config;

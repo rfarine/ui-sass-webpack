@@ -2,7 +2,7 @@
   "name": "ui-sass-webpack",
   "version": "1.0.0",
   "description": "",
-  "main": "./src/index.js",
+  "main": "./src/components/index.js",
   "scripts": {
     "webpack": "webpack --progress --colors",
     "build": "webpack --config webpack.prod.config.js -p --progress --colors",
