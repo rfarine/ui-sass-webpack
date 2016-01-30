@@ -9,7 +9,7 @@ var config = {
 
   output: {
     path: path.resolve(__dirname, 'public'),
-    filename: 'bundle.js'
+    filename: '[name].bundle.js'
   },
 
   module : {
@@ -29,13 +29,26 @@ var config = {
           path.resolve('src'),
         ],
       },
+      {
+        test: /\.css$/,
+        loader: "style!css"
+      },
+      {
+        test: /\.scss$/,
+        loader: "style!css!sass"
+      }
     ]
+  },
+  sassLoader: {
+    includePaths: [
+      path.resolve(__dirname, "./components"),
+    ],
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: 'html!./src/index.html'
+      template: 'html!./src/index.html',
     }),
-    new webpack.HotModuleReplacementPlugin()
+    new webpack.HotModuleReplacementPlugin(),
   ],
 
   resolve: {
@@ -46,7 +59,7 @@ var config = {
     historyApiFallback: true,
     stats: {
       chunkModules: false,
-      colors: true
+      colors: true,
     }
   }
 };

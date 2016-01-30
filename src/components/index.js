@@ -1,1 +1,1 @@
-export { default as HelloWorld } from '../../src/components/HelloWorld/HelloWorld';
+export { default as Styleguide } from '../../src/components/Styleguide/Styleguide';
