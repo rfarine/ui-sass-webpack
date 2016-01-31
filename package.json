@@ -7,7 +7,7 @@
     "build": "npm run build:clean && npm run build:public",
     "build:clean": "rm -rf public",
     "build:public": "webpack --config webpack.prod.config.js -p --progress --colors",
-    "dev": "webpack-dev-server --config webpack.dev.config.js --progress --colors --hot --inline --content-base public/",
+    "dev": "webpack-dev-server --config webpack.dev.config.js --progress --colors --content-base public/",
     "start": "npm run dev"
   },
   "repository": {
