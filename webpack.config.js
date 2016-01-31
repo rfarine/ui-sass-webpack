@@ -1,6 +1,7 @@
 var webpack = require('webpack');
-var HtmlWebpackPlugin = require('html-webpack-plugin');
 var path = require('path');
+var HtmlWebpackPlugin = require('html-webpack-plugin');
+var ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 var config = {
   entry: {
@@ -30,12 +31,8 @@ var config = {
         ],
       },
       {
-        test: /\.css$/,
-        loader: "style!css"
-      },
-      {
         test: /\.scss$/,
-        loader: "style!css!sass"
+        loader: ExtractTextPlugin.extract('style', 'css?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]!sass')
       }
     ]
   },
@@ -45,6 +42,7 @@ var config = {
     ],
   },
   plugins: [
+    new ExtractTextPlugin("styles.css"),
     new HtmlWebpackPlugin({
       template: 'html!./src/index.html',
     }),

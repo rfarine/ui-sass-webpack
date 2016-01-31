@@ -1,9 +1,9 @@
 import { default as React, Component } from 'react';
+import { default as styles } from './Header.scss';
+import { default as jade } from './Header.jade';
 
 export default class Header extends Component {
   render() {
-    return (
-      <div>hi this is a header</div>
-    );
+    return jade({ styles });
   }
 }

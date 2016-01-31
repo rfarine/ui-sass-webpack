@@ -1,3 +1,8 @@
-section(className=styles.content)
-  h1 Styleguide
-  = content
+div(className=styles.container)
+  section(className=styles.content)
+    h1 Styleguide
+    p Introducing... the components!
+
+    for component, i in components
+      div(key=i)
+        #{component}
