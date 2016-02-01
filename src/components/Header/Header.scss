@@ -1,3 +1,5 @@
+$variable-test : 'red';
+
 .text {
-  color: red;
+  color: $variable-test;
 }
