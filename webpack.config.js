@@ -10,7 +10,7 @@ var config = {
 
   output: {
     path: path.resolve(__dirname, 'public'),
-    filename: '[name].bundle.js'
+    filename: '/components/[name].js'
   },
 
   module : {
@@ -32,7 +32,7 @@ var config = {
       },
       {
         test: /\.scss$/,
-        loader: ExtractTextPlugin.extract('style', 'css?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]!sass')
+        loader: ExtractTextPlugin.extract('style', 'css?modules&importLoaders=1&localIdentName=[name]__[local]!sass')
       }
     ]
   },
@@ -42,7 +42,8 @@ var config = {
     ],
   },
   plugins: [
-    new ExtractTextPlugin("styles.css"),
+    new ExtractTextPlugin("css/[name].css"),
+    new ExtractTextPlugin("scss/[name].scss"),
     new HtmlWebpackPlugin({
       template: 'html!./src/index.html',
     }),
