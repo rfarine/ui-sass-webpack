@@ -24,8 +24,8 @@ var config = {
         ],
       },
       {
-        test: /\.jade$/, 
-        loader: 'react-hot!jade-react', 
+        test: /\.jade$/,
+        loader: 'react-hot!jade-react',
         include: [
           path.resolve('src'),
         ],
@@ -48,12 +48,14 @@ var config = {
       template: 'html!./src/index.html',
     }),
     new webpack.HotModuleReplacementPlugin(),
+    // new webpack.optimize.UglifyJsPlugin(),
   ],
 
   resolve: {
     extensions: ['', '.js', '.jsx']
   },
   devServer: {
+    inline: true,
     hot: true,
     historyApiFallback: true,
     stats: {

@@ -1,17 +1,17 @@
-import { default as React, Component } from 'react';
+import { default as React } from 'react';
 import { default as styles } from './Styleguide.scss';
-import { default as jade } from './Styleguide.jade';
+import { default as template } from './Styleguide.jade';
 
 import { default as Header } from '../../components/Header/Header';
 
-export default class Styleguide extends Component {
+export default class Styleguide extends React.Component {
   render() {
     return (
-      jade({ 
-        styles, 
+      template({
+        styles,
         components: {
           Header,
-        } 
+        },
       })
     );
   }
