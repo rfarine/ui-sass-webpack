@@ -10,7 +10,7 @@ var config = {
 
   output: {
     path: path.resolve(__dirname, 'public'),
-    filename: '/components/[name].js'
+    filename: '/assets/[name].js'
   },
 
   module : {
@@ -42,13 +42,11 @@ var config = {
     ],
   },
   plugins: [
-    new ExtractTextPlugin("css/[name].css"),
-    new ExtractTextPlugin("scss/[name].scss"),
+    new ExtractTextPlugin("assets/[name].css"),
     new HtmlWebpackPlugin({
       template: 'html!./src/index.html',
     }),
     new webpack.HotModuleReplacementPlugin(),
-    // new webpack.optimize.UglifyJsPlugin(),
   ],
 
   resolve: {

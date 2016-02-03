@@ -4,9 +4,9 @@
   "description": "",
   "main": "./src/components/index.js",
   "scripts": {
-    "build": "npm run build:clean && npm run build:public",
+    "build": "npm run build:clean && npm run build:all",
     "build:clean": "rm -rf public",
-    "build:public": "webpack --config webpack.prod.config.js -p --progress --colors",
+    "build:all": "webpack --config webpack.prod.config.js -p --progress --colors",
     "dev": "webpack-dev-server --config webpack.dev.config.js --progress --colors --content-base public/",
     "start": "npm run dev"
   },
@@ -14,7 +14,7 @@
     "type": "git",
     "url": "git+https://github.com/rfarine/ui-sass-webpack.git"
   },
-  "author": "Rae Farine",
+  "author": "",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/rfarine/ui-sass-webpack/issues"
