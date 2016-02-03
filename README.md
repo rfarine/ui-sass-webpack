@@ -8,10 +8,10 @@
 
 ### Build
 
-`npm run build` to both delete the `public` folder and rebuild it.
+`npm run build` to both delete the `public` and `dist` folders and rebuild them.
 
-  * Run `npm run build:clean` to remove `public` folder
-  * Run `npm run build:public` to build `public` folder
+  * Run `npm run build:clean` to remove `public` and `dist` folder
+  * Run `npm run build:all` to build `public` and `dist` folder
 
 
 
