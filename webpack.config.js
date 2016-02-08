@@ -5,7 +5,7 @@ var ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 var config = {
   entry: {
-    'entry': path.resolve(__dirname, 'src/components/entry.js'),
+    'docs': path.resolve(__dirname, 'docs/entry.js'),
   },
 
   output: {
@@ -19,6 +19,7 @@ var config = {
         test: /\.jsx?$/,
         loader: 'transform?envify!babel',
         include: [
+          path.resolve(__dirname, "docs"),
           path.resolve(__dirname, "src/components"),
           path.resolve(__dirname, "src/js"),
         ],
@@ -27,7 +28,8 @@ var config = {
         test: /\.jade$/,
         loader: 'react-hot!jade-react',
         include: [
-          path.resolve('src'),
+          path.resolve(__dirname, "docs"),
+          path.resolve(__dirname, "src"),
         ],
       },
       {
@@ -38,13 +40,14 @@ var config = {
   },
   sassLoader: {
     includePaths: [
+      path.resolve(__dirname, "./docs"),
       path.resolve(__dirname, "./components"),
     ],
   },
   plugins: [
     new ExtractTextPlugin("assets/[name].css"),
     new HtmlWebpackPlugin({
-      template: 'html!./src/index.html',
+      template: 'html!./docs/index.html',
     }),
     new webpack.HotModuleReplacementPlugin(),
   ],
