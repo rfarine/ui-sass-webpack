@@ -1,4 +1,4 @@
-# Oui Sass
+# Ui Sass Webpack
 
 ### Setup
 `npm install`
