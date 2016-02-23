@@ -1,5 +1,18 @@
-.container {
-  background: #EEEEEE;
+@import "~susy/sass/susy";
+@import "../../src/settings";
+@import "../../src/style";
+
+.wrapper {
+  @include container;
+  background: white;
 }
 
-.content {};
+.sidebar {
+  @include span(3 of 12);
+};
+
+.content {
+  @include span(9 of 12);
+};
+
+.component {};

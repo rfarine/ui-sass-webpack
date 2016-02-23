@@ -1,8 +1,11 @@
-div(className=styles.container)
+div(className=styles.wrapper)
+  section(className=styles.sidebar)
+    h1 UI Fun
+    ul
+      li Link
+      li Link
+      li Link
   section(className=styles.content)
-    h1 Styleguide
-    p Introducing... the components!
-
     for component, i in components
-      div(key=i)
+      div(key=i className=styles.component)
         #{component}
