@@ -1,14 +1,14 @@
 @import "~susy/sass/susy";
-@import "../../src/settings";
 @import "../../src/style";
 
 .wrapper {
   @include container;
-  background: white;
 }
 
 .sidebar {
   @include span(3 of 12);
+  background: $sidebar-bg;
+  height: 100vh;
 };
 
 .content {

@@ -1,0 +1,21 @@
+$susy: (
+  columns: 12,
+  gutters: 1/4,
+  math: fluid,
+  output: float,
+  gutter-position: inside,
+);
+
+$orange: #F7B98A;
+$tan: #EBDFC5;
+$yellow: #D9D389;
+$gray: #BEC0BF;
+$lilac: #B6A9B0;
+
+$danger: $orange;
+$warning: $yellow;
+$disabled: $gray;
+$success: $lilac;
+
+$body-bg: $lilac;
+$sidebar-bg: $gray;
