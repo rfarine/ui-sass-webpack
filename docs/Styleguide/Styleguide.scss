@@ -6,13 +6,39 @@
 }
 
 .sidebar {
-  @include span(3 of 12);
+  @include span(2 of 12);
   background: $sidebar-bg;
+  color: white;
   height: 100vh;
 };
 
+.links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  > li {
+    padding: 0.5em 1em;
+    text-align: center;
+  }
+
+  > a, a:link {
+    font-size: 1.2em;
+    font-weight: 300;
+    color: $sidebar-link-text;
+    transition: color ease-in-out 0.15s;
+
+    &:hover {
+      color: $sidebar-link-text-hover;
+      transition: color ease-in-out 0.05s;
+    }
+  }
+}
+
 .content {
-  @include span(9 of 12);
+  @include span(10 of 12);
 };
 
-.component {};
+.component {
+  padding: 2em 1em;
+};
