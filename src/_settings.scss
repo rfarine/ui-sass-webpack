@@ -6,16 +6,30 @@ $susy: (
   gutter-position: inside,
 );
 
-$orange: #F7B98A;
-$tan: #EBDFC5;
-$yellow: #D9D389;
-$gray: #BEC0BF;
-$lilac: #B6A9B0;
+$red: #C84420;
+$tan: #F5EAB0;
+$teal: #267765;
+$black: #23322F;
+$white: #EAE9DC;
 
-$danger: $orange;
-$warning: $yellow;
-$disabled: $gray;
-$success: $lilac;
+$danger: $red;
+$warning: $tan;
+$disabled: $black;
+$success: $teal;
 
-$body-bg: $lilac;
-$sidebar-bg: $gray;
+$body-bg: $white;
+
+$sidebar-bg: $red;
+$sidebar-link-text: $white;
+$sidebar-link-text-hover: darken($red, 20%);
+
+$primary: $red;
+$secondary: $teal;
+
+$primary-link-text: $primary;
+
+$component-header: $black;
+$button-bg: $secondary;
+$button-text: lighten($button-bg, 20%);
+$button-bg-hover: darken($button-bg, 5%);
+$button-text-hover: darken($button-bg-hover, 10%);

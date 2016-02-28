@@ -1,10 +1,15 @@
 {
   "parser": "babel-eslint",
-  "extends": "airbnb",
+  "extends": ["airbnb"],
   "rules": {
     "arrow-spacing": 2,
     "object-curly-spacing": [2, "always"],
     "no-multiple-empty-lines": [2, {"max": 1}],
-    "id-length": [2, {"exceptions": ["$", "_", "w", "h"]}],
+    "id-length": [2, {"exceptions": ["$", "_",]}],
+  },
+  {
+    "plugins": [
+      "react"
+    ]
   },
 }

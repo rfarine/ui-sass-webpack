@@ -3,6 +3,10 @@ import { default as styles } from './Button.scss';
 
 export default class Button extends Component {
   render() {
-    return <button className={styles.component}>Button</button>;
+    return (
+      <div>
+        <button className={styles.component}>Default</button>
+      </div>
+    );
   }
 }
