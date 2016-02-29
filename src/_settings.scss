@@ -18,6 +18,7 @@ $disabled: $black;
 $success: $teal;
 
 $body-bg: $white;
+$text: $black;
 
 $sidebar-bg: $red;
 $sidebar-link-text: $white;
@@ -33,3 +34,5 @@ $button-bg: $secondary;
 $button-text: lighten($button-bg, 20%);
 $button-bg-hover: darken($button-bg, 5%);
 $button-text-hover: darken($button-bg-hover, 10%);
+
+@import "~susy/sass/susy";
