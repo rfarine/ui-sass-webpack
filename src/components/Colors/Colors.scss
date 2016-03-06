@@ -1,0 +1,49 @@
+@import "../../settings";
+
+.list {
+  @include container;
+}
+
+.swatch {
+  @include span(1 of 6);
+  padding-top: 3em;
+  margin-right: 1em;
+  border: 10px solid fade-out($white, 0.5);
+}
+
+.hex, .variable {
+  display: block;
+  position: relative;
+  padding: 0.5em;
+  font-size: 0.75em;
+  font-weight: 700;
+  text-align: center;
+  background: fade-out($white, 0.5);
+}
+
+$colors: (
+  red: $red-hover,
+  tan: $tan-hover,
+  teal: $teal-hover,
+  black: $black-hover,
+  white: $white-hover,
+  );
+
+@each $color, $hover in $colors {
+  .swatch_#{$color} {
+    color: #{$color};
+    background-color: #{$color};
+
+    .hex, .variable {
+      color: darken($color, 20%);
+    }
+
+    &:hover {
+      .hex, .variable {
+        color: $hover;
+      }
+      background-color: $hover;
+      transition: all ease-in-out 0.5s;
+    }
+  }
+}

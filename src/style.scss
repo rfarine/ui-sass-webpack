@@ -1,16 +1,19 @@
 @import "settings";
 
 html, body {
-  font-family: "Lato", sans-serif;
-  font-weight: 100;
+  font-family: $base-font-family;
+  font-weight: 300;
   background: $body-bg;
   margin: 0;
-  -webkit-font-smoothing: antialiased;
 }
 
 h1, h2, h3, h4, h5, h6 {
   text-transform: uppercase;
   font-weight: 700;
+}
+
+ul {
+  list-style: none;
 }
 
 a, a:link {

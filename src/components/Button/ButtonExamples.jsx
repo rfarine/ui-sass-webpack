@@ -9,7 +9,7 @@ export default class ButtonExamples extends Component {
   render() {
     return (
       <div>
-        <h1 className={styles.header}>Buttons</h1>
+        <h1>Buttons</h1>
 
         <Button /><br/><br/>
         <ButtonSmall /><br/><br/>
