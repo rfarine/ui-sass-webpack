@@ -1,0 +1,42 @@
+$susy: (
+  columns: 12,
+  gutters: 1/4,
+  math: fluid,
+  output: float,
+  gutter-position: inside,
+);
+
+$red: #C84420;
+$tan: #F5EAB0;
+$teal: #267765;
+$black: #23322F;
+$white: #EAE9DC;
+
+$red-hover: transparentize($red, 0.5);
+$tan-hover: transparentize($tan, 0.5);
+$teal-hover: transparentize($teal, 0.5);
+$black-hover: transparentize($black, 0.5);
+$white-hover: transparentize($black, 0.5);
+
+$danger: $red;
+$warning: $tan;
+$disabled: $black;
+$success: $teal;
+
+$body-bg: $white;
+$text: $black;
+
+$sidebar-bg: $red;
+$sidebar-link-text: $white;
+$sidebar-link-text-hover: darken($red, 20%);
+
+$primary: $red;
+$secondary: $teal;
+
+$primary-link-text: $primary;
+
+$component-header: $black;
+$button-bg: $secondary;
+$button-text: lighten($button-bg, 30%);
+$button-bg-hover: darken($button-bg, 5%);
+$button-text-hover: darken($button-bg-hover, 10%);

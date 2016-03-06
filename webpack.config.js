@@ -42,6 +42,7 @@ var config = {
     includePaths: [
       path.resolve(__dirname, "./docs"),
       path.resolve(__dirname, "./components"),
+      path.join(__dirname, "node_modules/support-for/sass"),
     ],
   },
   plugins: [

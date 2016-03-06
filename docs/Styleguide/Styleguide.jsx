@@ -10,8 +10,8 @@ export default class Styleguide extends Component {
       template({
         styles,
         components: {
-          ButtonExamples,
           Colors,
+          ButtonExamples,
         },
       })
     );

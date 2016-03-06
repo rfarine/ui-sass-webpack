@@ -4,25 +4,29 @@ import { default as _ } from 'lodash';
 
 export default class Colors extends Component {
   static propTypes = {
-    colors: PropTypes.array.isRequired,
+    colors: PropTypes.object.isRequired,
   };
 
   static defaultProps = {
-    colors: [
-      'red', 'tan', 'teal', 'black', 'white',
-    ],
+    colors: {
+      red: '#C84420',
+      tan: '#F5EAB0',
+      teal: '#267765',
+      black: '#23322F',
+      white: '#EAE9DC',
+    },
   };
 
   getListItems() {
     const { colors } = this.props;
 
     const listItems = _.map(colors, (color, key) => (
-      <li key={key} className={`${styles.swatch} ${styles.swatch}_${color}`}>
+      <li key={key} className={`${styles.swatch} ${styles.swatch}_${key}`}>
         <span className={styles.hex}>
-          Color Hex
+          {color}
         </span>
         <span className={styles.variable}>
-          {color}
+          ${key}
         </span>
       </li>
     ));
@@ -35,7 +39,8 @@ export default class Colors extends Component {
 
     return (
       <div>
-        <ul>
+        <h1>Colors</h1>
+        <ul className={styles.list}>
           {listItems}
         </ul>
       </div>
