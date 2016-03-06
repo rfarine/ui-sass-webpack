@@ -4,21 +4,26 @@
   @include container;
 }
 
-.swatch {
+.listItem {
   @include span(1 of 6);
-  padding-top: 3em;
-  margin-right: 1em;
-  border: 10px solid fade-out($white, 0.5);
 }
 
-.hex, .variable {
+.swatch, .color {
   display: block;
+  @include container;
+}
+
+.swatch {
+  padding: 2em 1em;
+}
+
+.color {
   position: relative;
-  padding: 0.5em;
+  padding: 1em;
   font-size: 0.75em;
   font-weight: 700;
   text-align: center;
-  background: fade-out($white, 0.5);
+  background: white;
 }
 
 $colors: (
@@ -26,6 +31,7 @@ $colors: (
   tan: $tan-hover,
   teal: $teal-hover,
   black: $black-hover,
+  gray: $gray-hover,
   white: $white-hover,
   );
 
@@ -34,13 +40,15 @@ $colors: (
     color: #{$color};
     background-color: #{$color};
 
-    .hex, .variable {
+    ~ .color {
       color: darken($color, 20%);
+      border-bottom: 10px solid transparentize($color, 0.5);
     }
 
     &:hover {
-      .hex, .variable {
+      ~ .color {
         color: $hover;
+        border-bottom: 10px solid transparentize($color, 0.75);
       }
       background-color: $hover;
       transition: all ease-in-out 0.5s;

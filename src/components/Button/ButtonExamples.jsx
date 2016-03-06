@@ -1,5 +1,4 @@
 import { default as React, Component } from 'react';
-import { default as styles } from './Button.scss';
 import { default as Button } from './Button';
 import { default as ButtonSmall } from './ButtonSmall';
 import { default as ButtonLarge } from './ButtonLarge';

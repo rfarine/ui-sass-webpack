@@ -1,20 +1,27 @@
 @import "../../src/style";
 
-.wrapper {
+.navigation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
   @include container;
-}
-
-.sidebar {
-  @include span(2 of 12);
-  background: $sidebar-bg;
+  background: $navigation-bg;
   color: white;
-  height: 100vh;
+  display: flex;
+  justify-content: center;
+  padding: 1em 0;
 };
 
 .links {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
   list-style: none;
   padding: 0;
   margin: 0;
+  @include span(6 of 12);
 
   > li {
     padding: 0.5em 1em;
@@ -22,22 +29,24 @@
   }
 
   > a, a:link {
-    font-size: 1.2em;
+    font-size: 1em;
     font-weight: 300;
-    color: $sidebar-link-text;
+    color: $navigation-link-text;
     transition: color ease-in-out 0.15s;
 
     &:hover {
-      color: $sidebar-link-text-hover;
+      color: $navigation-link-text-hover;
       transition: color ease-in-out 0.05s;
     }
   }
 }
 
 .content {
-  @include span(10 of 12);
+  margin-top: 3em;
+  @include span(12 of 12);
 };
 
 .component {
+  @include container;
   padding: 2em;
 };
