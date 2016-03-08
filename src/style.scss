@@ -8,12 +8,21 @@ html, body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  text-transform: uppercase;
+  font-family: $secondary-font-family;
   font-weight: 700;
+  color: $header;
+}
+
+strong {
+  font-family: $secondary-font-family;
+  font-weight: 700;
+  font-style: italic;
 }
 
 ul {
   list-style: none;
+  padding: 0;
+  @include container;
 }
 
 a, a:link {

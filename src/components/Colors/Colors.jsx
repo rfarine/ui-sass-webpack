@@ -13,6 +13,7 @@ export default class Colors extends Component {
       tan: '#F5EAB0',
       teal: '#267765',
       black: '#23322F',
+      gray: '#9EAFAD',
       white: '#EAE9DC',
     },
   };
@@ -21,11 +22,10 @@ export default class Colors extends Component {
     const { colors } = this.props;
 
     const listItems = _.map(colors, (color, key) => (
-      <li key={key} className={`${styles.swatch} ${styles.swatch}_${key}`}>
-        <span className={styles.hex}>
-          {color}
-        </span>
-        <span className={styles.variable}>
+      <li key={key} className={styles.listItem}>
+        <span className={`${styles.swatch} ${styles.swatch}_${key}`}></span>
+        <span className={styles.color}>
+          {color}<br/>
           ${key}
         </span>
       </li>

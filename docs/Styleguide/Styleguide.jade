@@ -1,29 +1,28 @@
-div(className=styles.wrapper)
-  section(className=styles.sidebar)
-    ul(className=styles.links)
-      li 
-        a(href="#typography") Typography
-      li 
-        a(href="#colors") Colors
-      li 
-        a(href="#buttons") Buttons
-      li 
-        a(href="#buttongroups") Button Groups
-      li 
-        a(href="#buttondropdowns") Button Dropdowns
-      li 
-        a(href="#labels") Labels
-      li 
-        a(href="#badges") Badges
-      li
-        a(href="#alerts") Alerts
-      li 
-        a(href="#navigation") Navigation
-      li
-        a(href="#dropdowns") Forms
-      li
-        a(href="#selector") Selector
-  section(className=styles.content)
-    for component, i in components
-      div(key=i className=styles.component)
-        #{component}
+div(className=styles.navigation)
+  ul(className=styles.links)
+    li 
+      a(href="#typography") Typography
+    li 
+      a(href="#colors") Colors
+    li 
+      a(href="#buttons") Buttons
+    li 
+      a(href="#buttongroups") Button Groups
+    //- li 
+    //-   a(href="#buttondropdowns") Button Dropdowns
+    //- li 
+    //-   a(href="#labels") Labels
+    //- li 
+    //-   a(href="#badges") Badges
+    //- li
+    //-   a(href="#alerts") Alerts
+    //- li 
+    //-   a(href="#navigation") Navigation
+    //- li
+    //-   a(href="#dropdowns") Forms
+    //- li
+    //-   a(href="#selector") Selector
+section(className=styles.content)
+  for component, i in components
+    div(key=i className=styles.component)
+      #{component}

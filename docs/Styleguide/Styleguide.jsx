@@ -2,7 +2,7 @@ import { default as React, Component } from 'react';
 import { default as styles } from './Styleguide.scss';
 import { default as template } from './Styleguide.jade';
 
-import { ButtonExamples, Colors } from '../../src/components';
+import { ButtonExamples, Colors, Typography } from '../../src/components';
 
 export default class Styleguide extends Component {
   render() {
@@ -10,6 +10,7 @@ export default class Styleguide extends Component {
       template({
         styles,
         components: {
+          Typography,
           Colors,
           ButtonExamples,
         },

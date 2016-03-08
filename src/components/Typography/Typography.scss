@@ -1,0 +1,17 @@
+@import "../../settings";
+
+.headers {
+  @include span(1 of 2);
+}
+
+.text {
+  @include span(1 of 2);
+}
+
+.bodyText {
+  @extend p;
+}
+
+.lgBodyText {
+  font-size: 1.5em;
+}
