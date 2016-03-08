@@ -37,8 +37,8 @@ $colors: (
 
 @each $color, $hover in $colors {
   .swatch_#{$color} {
-    color: #{$color};
-    background-color: #{$color};
+    color: $color;
+    background: $color;
 
     ~ .color {
       color: darken($color, 20%);
@@ -52,6 +52,16 @@ $colors: (
       }
       background-color: $hover;
       transition: all ease-in-out 0.5s;
+    }
+  }
+
+  .#{$color} {
+    color: $white;
+    background: $color;
+
+    &:hover {
+      color: $color;
+      background: $hover;
     }
   }
 }
