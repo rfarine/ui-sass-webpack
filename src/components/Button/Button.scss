@@ -1,12 +1,20 @@
 @import "../../settings";
 
+.sg_container {
+ @include container;
+}
+
+.sg_section {
+  @include span(6 of 12);
+}
+
 .component {
   background: $button-bg;
   color: $button-text;
   border: none;
   padding: 0.9em 1.5em;
   font-size: 0.85em;
-  letter-spacing: 1px;
+  letter-spacing: 0.75;
   text-transform: uppercase;
   cursor: pointer;
   transition: all ease-in-out 0.2s;
@@ -29,5 +37,36 @@
   &_xlg {
     font-size: 1.25em;
     padding: 1.25em 3.5em;
+  }
+  &_isDanger {
+    background: $danger;
+    color: $white;
+    &:hover {
+      color: $white;
+      background: $danger-hover;
+    }
+  }
+  &_isWarning {
+    background: $warning;
+    color: darken($warning, 50%);
+    &:hover {
+      color: darken($warning, 50%);
+      background: $warning-hover;
+    }
+  }
+  &_isDisabled {
+    background: $disabled;
+    color: darken($gray, 20%);
+    &:hover {
+      color: darken($gray, 20%);
+      transform: scale(1);
+      cursor: not-allowed;
+    }
+  }
+  &_isSuccess {
+    background: $success;
+    &:hover {
+      background: $success-hover;
+    }
   }
 }

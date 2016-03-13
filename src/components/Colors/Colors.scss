@@ -27,16 +27,36 @@
 }
 
 $colors: (
+  red: $red,
+  yellow: $yellow,
+  teal: $teal,
+  black: $black,
+  gray: $gray,
+  white: $white,
+);
+
+$hovers: (
   red: $red-hover,
-  tan: $tan-hover,
+  yellow: $yellow-hover,
   teal: $teal-hover,
   black: $black-hover,
   gray: $gray-hover,
   white: $white-hover,
-  );
+);
 
-@each $color, $hover in $colors {
-  .swatch_#{$color} {
+@function match($list, $colorName) {
+  @each $color in $list {
+    $index: index($color, $colorName);
+
+    @if $index {
+      $return: if($index == 1, 2, $index);
+      @return nth($color, $return);
+    }
+  }
+}
+
+@each $colorName, $color in $colors {
+  .swatch_#{$colorName} {
     color: $color;
     background: $color;
 
@@ -47,21 +67,21 @@ $colors: (
 
     &:hover {
       ~ .color {
-        color: $hover;
-        border-bottom: 10px solid transparentize($color, 0.75);
+        color: match($hovers, $colorName);
+        border-bottom: 10px solid transparentize(match($hovers, $colorName), 0.75);
       }
-      background-color: $hover;
+      background-color: match($hovers, $colorName);
       transition: all ease-in-out 0.5s;
     }
   }
 
-  .#{$color} {
+  .#{$colorName} {
     color: $white;
     background: $color;
 
     &:hover {
       color: $color;
-      background: $hover;
+      background: match($hovers, $colorName);
     }
   }
 }

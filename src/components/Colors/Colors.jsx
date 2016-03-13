@@ -10,7 +10,7 @@ export default class Colors extends Component {
   static defaultProps = {
     colors: {
       red: '#C84420',
-      tan: '#F5EAB0',
+      yellow: '#F5EAB0',
       teal: '#267765',
       black: '#23322F',
       gray: '#9EAFAD',

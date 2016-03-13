@@ -10,23 +10,27 @@ $susy: (
 );
 
 $red: #C84420;
-$tan: #F5EAB0;
+$yellow: #F5EAB0;
 $teal: #267765;
 $black: #23322F;
 $gray: #9EAFAD;
 $white: #EAE9DC;
 
-$red-hover: transparentize($red, 0.5);
-$tan-hover: transparentize($tan, 0.5);
-$teal-hover: transparentize($teal, 0.5);
-$black-hover: transparentize($gray, 0.5);
-$gray-hover: transparentize($gray, 0.75);
-$white-hover: transparentize($gray, 0.95);
+$red-hover: darken($red, 10%);
+$yellow-hover: lighten($yellow, 10%);
+$teal-hover: darken($teal, 10%);
+$black-hover: darken($gray, 10%);
+$gray-hover: darken($gray, 10%);
+$white-hover: darken($gray, 10%);
 
 $danger: $red;
-$warning: $tan;
-$disabled: $black;
+$warning: $yellow;
+$disabled: $gray;
 $success: $teal;
+
+$danger-hover: $red-hover;
+$warning-hover: $yellow-hover;
+$success-hover: $teal-hover;
 
 $body-bg: $white;
 $header: $black;
@@ -42,7 +46,7 @@ $secondary: $teal;
 $primary-link-text: $primary;
 
 $component-header: $black;
-$button-bg: $teal;
-$button-text: lighten($button-bg, 30%);
-$button-bg-hover: $teal-hover;
-$button-text-hover: darken($button-bg-hover, 10%);
+$button-bg: $black;
+$button-text: $white;
+$button-bg-hover: $gray;
+$button-text-hover: $white;
