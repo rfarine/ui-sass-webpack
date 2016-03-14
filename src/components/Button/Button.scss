@@ -5,10 +5,12 @@
 }
 
 .sg_section {
-  @include span(6 of 12);
+  @include span(4 of 12);
+  text-align: center;
 }
 
 .component {
+  display: inline-block;
   background: $button-bg;
   color: $button-text;
   border: none;
@@ -22,30 +24,44 @@
   &:hover {
     background: $button-bg-hover;
     color: $button-text-hover;
-    transform: scale(1.05);
     transition: all ease-in-out 0.1s;
+  }
+
+  &:focus {
+    outline: none;
   }
 
   &_sm {
     font-size: 0.65em;
     padding: 0.75em 1em;
   }
+
   &_lg {
     font-size: 0.9em;
     padding: 1.05em 3.25em;
   }
+
   &_xlg {
     font-size: 1.25em;
     padding: 1.25em 3.5em;
   }
+
+  &_white {
+    background: $white;
+    color: $black;
+    &:hover {
+      color: $black;
+      background: $white-hover;
+    }
+  }
+
   &_isDanger {
     background: $danger;
-    color: $white;
     &:hover {
-      color: $white;
       background: $danger-hover;
     }
   }
+
   &_isWarning {
     background: $warning;
     color: darken($warning, 50%);
@@ -54,19 +70,45 @@
       background: $warning-hover;
     }
   }
+
   &_isDisabled {
     background: $disabled;
     color: darken($gray, 20%);
     &:hover {
       color: darken($gray, 20%);
-      transform: scale(1);
       cursor: not-allowed;
     }
   }
+
   &_isSuccess {
     background: $success;
     &:hover {
       background: $success-hover;
     }
+  }
+}
+
+.dropdown_wrapper {
+  display: inline-block;
+}
+
+.dropdown {
+  background: $white;
+  margin: 0;
+  display: none;
+
+  &_item {
+    padding: 0.5em 1em;
+    color: $teal;
+    background: transparentize($teal, 0.5);
+
+    &:hover {
+      cursor: pointer;
+      background: transparentize($teal, 0.75);
+    }
+  }
+
+  &_isOpen {
+    display: block;
   }
 }

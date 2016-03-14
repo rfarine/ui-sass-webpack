@@ -21,7 +21,7 @@ $yellow-hover: lighten($yellow, 10%);
 $teal-hover: darken($teal, 10%);
 $black-hover: darken($gray, 10%);
 $gray-hover: darken($gray, 10%);
-$white-hover: darken($gray, 10%);
+$white-hover: transparentize($white, 0.5);
 
 $danger: $red;
 $warning: $yellow;
