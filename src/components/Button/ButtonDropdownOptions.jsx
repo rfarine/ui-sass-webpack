@@ -19,7 +19,6 @@ export default class ButtonDropdownOptions extends Component {
   }
 
   componentWillReceiveProps(nextProps) {
-    console.log('component will receive props...', nextProps);
     if (nextProps.toggle === true) {
       nextProps.style.push(styles.dropdown_isOpen);
     } else if (_.includes(nextProps.style, styles.dropdown_isOpen)) {
